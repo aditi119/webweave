@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfde5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: white;
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.note {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gender-options {
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox-group {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.essay-section {
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: darkred;
+}
