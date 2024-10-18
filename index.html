@@ -1,108 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffd4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 80%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .note {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            margin-left: 5px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        .submit-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
     <div class="form-container">
-      <h1>Application Form</h1>
-      <p class="note">
-        Note: Form is to be completed at least 21 days prior to date
-      </p>
-
-      <form>
-        <fieldset>
-          <legend>Personal Details</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter name here" />
-
-          <label for="address">Address:</label>
-          <input type="text" id="address" placeholder="Enter address here" />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter email here" />
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" placeholder="Enter 10 digit number" />
-
-          <label for="iq">IQ:</label>
-          <input type="number" id="iq" placeholder="Enter IQ here" />
-
-          <label>Gender:</label>
-          <div class="gender-options">
-            <input type="radio" id="male" name="gender" value="male" checked />
-            <label for="male">&nbsp;&nbsp;&nbsp;&nbsp;Male</label> <br>
-
-            <input type="radio" id="female" name="gender" value="female" />
-            <label for="female">&nbsp;&nbsp;&nbsp;&nbsp;Female</label> <br>
-
-            <input type="radio" id="other" name="gender" value="other" />
-            <label for="other">&nbsp;&nbsp;&nbsp;&nbsp;Other</label> <br>
-          </div>
-
-          <label for="outing-date">Date of Proposed Outing:</label>
-          <input type="date" id="outing-date" />
-
-          <label>Check All That Apply</label>
-          <div class="checkbox-group">
-            <input type="checkbox" id="tattoos" />
-            <label for="tattoos">&nbsp;&nbsp;&nbsp;&nbsp;I have tattoos and/or piercings</label><br />
-
-            <input type="checkbox" id="age-diff" />
-            <label for="age-diff"
-              >&nbsp;&nbsp;&nbsp;&nbsp;I am more than 2 years older than my daughter</label
-            ><br />
-
-            <input type="checkbox" id="van" />
-            <label for="van">&nbsp;&nbsp;&nbsp;&nbsp;I own a panel van or V8 ute</label><br />
-
-            <input type="checkbox" id="full-time" checked />
-            <label for="full-time">&nbsp;&nbsp;&nbsp;&nbsp;I work full-time</label><br />
-
-            <input type="checkbox" id="rich" checked />
-            <label for="rich">&nbsp;&nbsp;&nbsp;&nbsp;My parents are rich</label><br />
-
-            <input type="checkbox" id="public-date" checked />
-            <label for="public-date"
-              >&nbsp;&nbsp;&nbsp;&nbsp;Is the date at a well-lit public location</label
-            >
-          </div>
-
-          <label for="political-view">Political Persuasion:</label>
-          <select id="political-view">
-            <option>Left Wing</option>
-            <option>Right Wing</option>
-            <option>Neutral</option>
-          </select>
-
-          <label for="education-level">Education Level Completed:</label>
-          <select id="education-level">
-            <option>University</option>
-            <option>High School</option>
-            <option>College</option>
-          </select>
-
-          <div class="essay-section">
-            <label for="essay"
-              >In 50 words or more explain why you want to date my
-              daughter:</label
-            >
-            <textarea id="essay" rows="4"></textarea>
-
-            <label for="references"
-              >Please upload contact details for 2 references:</label
-            >
-            <textarea id="references" rows="4"></textarea>
-          </div>
-
-          <button type="submit" class="submit-button">
-            Send Your Application
-          </button>
-        </fieldset>
-      </form>
+        <h1>Application Form</h1>
+        <p class="note">Note: Form is to be completed at least 21 days prior to date</p>
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter name here" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter address here" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email here" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="iq">IQ:</label>
+                    <input type="text" id="iq" name="iq" placeholder="Enter IQ here">
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="radio-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date of Proposed Outing:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Check All That Apply</legend>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="tattoos" name="apply" value="tattoos">
+                    <label for="tattoos">I have tattoos and/or piercings</label>
+                </div>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="age" name="apply" value="age">
+                    <label for="age">I am more than 2 years older than my daughter</label>
+                </div>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="van" name="apply" value="van">
+                    <label for="van">I own a panel van or V8 ute</label>
+                </div>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="work" name="apply" value="work" checked>
+                    <label for="work">I work full-time</label>
+                </div>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="parents" name="apply" value="parents" checked>
+                    <label for="parents">My parents are rich</label>
+                </div>
+                <div class="checkbox-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="location" name="apply" value="location" checked>
+                    <label for="location">Is the date at a well lit public location</label>
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                <label for="political">Political Persuasion:</label>
+                <select id="political" name="political">
+                    <option value="left">Left Wing</option>
+                    <option value="right">Right Wing</option>
+                    <option value="center">Center</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="education">Education Level Completed:</label>
+                <select id="education" name="education">
+                    <option value="university">University</option>
+                    <option value="college">College</option>
+                    <option value="highschool">High School</option>
+                </select>
+            </div>
+            
+            <fieldset>
+                <legend>Essay Section</legend>
+                <div class="form-group">
+                    <label for="essay">In 50 words or more explain why you want to date my daughter</label>
+                    <textarea id="essay" name="essay" rows="4" required></textarea>
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                <label for="references">Please upload contact details for 2 references</label>
+                <textarea id="references" name="references" rows="4" required></textarea>
+            </div>
+            
+            <div style="text-align: center;">
+                <button type="submit" class="submit-btn">Send Your Application</button>
+            </div>
+        </form>
     </div>
-  </body>
+</body>
 </html>
