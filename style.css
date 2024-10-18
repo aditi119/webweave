@@ -62,7 +62,6 @@ select {
 }
 
 .gender-options {
-  display: flex;
   gap: 10px;
 }
 
